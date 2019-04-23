@@ -1,4 +1,14 @@
+import AnimationFrame from 'animation-frame';
+import FPSMeter from 'fps-meter/FPSMeter';
+
 import './styles.scss';
 
-const div = document.querySelector('#app');
-div.innerHTML = 'Hello World';
+const animationFrame = new AnimationFrame();
+const fpsMeter = new FPSMeter('fps-meter');
+
+const animate = () => {
+  animationFrame.request(animate);
+  fpsMeter.tick();
+};
+
+animate();
