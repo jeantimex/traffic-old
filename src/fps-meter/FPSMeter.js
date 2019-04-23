@@ -10,7 +10,7 @@ export default class FPSMeter {
     } else {
       this.element = element;
     }
-    this.element.classList.add('fps-element');
+    this.element.classList.add('fps-meter');
 
     this.updateRate = opts.updateRate || MS_IN_ONE_SECOND;
     this.tickCounter = 0;
