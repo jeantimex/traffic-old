@@ -2,7 +2,7 @@
   "name": "traffic",
   "version": "1.0.0",
   "description": "A road traffic simulation based on the intelligent driver model (IDW)",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint ./src",
     "dev": "webpack --mode development",
