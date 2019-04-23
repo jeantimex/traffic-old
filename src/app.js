@@ -1,5 +1,5 @@
 import AnimationFrame from 'animation-frame';
-import FPSMeter from 'fps-meter/FPSMeter';
+import FPSMeter from 'fps-meter';
 
 import './styles.scss';
 
