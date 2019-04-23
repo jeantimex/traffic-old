@@ -1,26 +1,38 @@
 {
-  "name": "webpack-4-html5",
+  "name": "traffic",
   "version": "1.0.0",
-  "description": "",
+  "description": "A road traffic simulation based on the intelligent driver model (IDW)",
   "main": "index.js",
   "scripts": {
+    "lint": "./node_modules/.bin/eslint ./src",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development --open",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "keywords": [],
-  "author": "",
+  "author": "Yong Su",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "css-loader": "^2.1.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
+    "prettier": "^1.17.0",
     "sass-loader": "^7.1.0",
     "webpack": "^4.28.3",
     "webpack-cli": "^3.2.0",

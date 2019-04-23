@@ -1,0 +1,9 @@
+{
+  "editor.formatOnSave": false,
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.rulers": [80]
+  },
+  "editor.wordWrapColumn": 80,
+  "editor.wordWrap": "bounded"
+}
