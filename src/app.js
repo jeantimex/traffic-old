@@ -8,7 +8,14 @@ const animationFrame = new AnimationFrame();
 const fpsMeter = new FPSMeter('fps-meter');
 const world = new World();
 
+const defaultTimeFactor = 5;
+
 let then = Date.now();
+let isPaused = true;
+
+window.addEventListener('keydown', () => {
+  isPaused = !isPaused;
+});
 
 const animate = () => {
   animationFrame.request(animate);
@@ -18,7 +25,9 @@ const animate = () => {
   const delta = now - then;
   then = now;
 
-  world.update(delta);
+  if (!isPaused) {
+    world.update((defaultTimeFactor * delta) / 1000);
+  }
 };
 
 const run = () => {

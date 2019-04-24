@@ -39,6 +39,7 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
-    "animation-frame": "^0.3.0"
+    "animation-frame": "^0.3.0",
+    "uuid": "^3.3.2"
   }
 }
